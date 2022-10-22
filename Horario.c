@@ -3,7 +3,7 @@
 
 int main(){
 
-    int horas, minutos=0, segundos=0, horasatt, minutosatt, segundosatt, h, m, s, Hatt, Matt, Satt;
+    int horas=0, minutos=0, segundos=0, horasatt, minutosatt, segundosatt, h, m, s, Hatt, Matt, Satt;
 
     printf("Insira o horario de entrada do veiculo.\nHoras: ");
     scanf("%i", &horas);
