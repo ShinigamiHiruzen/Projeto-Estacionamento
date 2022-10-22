@@ -3,9 +3,13 @@
 
 int main(){
 
-    setlocale(LC_ALL, "Portuguese");
-    int horas=0, minutos=0, segundos=0, horasatt, minutosatt, segundosatt, h, m, s, Hatt, Matt, Satt;
+    int horas=0, minutos=0, segundos=0, horasatt=0, minutosatt=0, segundosatt=0, h, m, s, Hatt, Matt, Satt, identificacao;
+    
 
+    setlocale(LC_ALL, "Portuguese");
+
+    printf("Insira a numeracao do veiculo: ");
+    scanf("%i", &identificacao);
     printf("Insira o horario de entrada do veiculo.\nHoras: ");
     scanf("%i", &horas);
     printf("Minutos: ");
@@ -19,7 +23,7 @@ int main(){
         minutosatt = minutos;
         segundosatt = segundos;
     }
-     printf("Insira o horario de sai­da do veiculo.\nHoras: ");
+    printf("Insira o horario de sai­da do veiculo.\nHoras: ");
     scanf("%i", &horas);
     printf("Minutos: ");
     scanf("%i", &minutos);
@@ -30,7 +34,7 @@ int main(){
     m = minutosatt - minutos;
     s = segundosatt - segundos;
 
-    if(h < 0){
+     if(h < 0){
 
         Hatt = h * -1;
     } if(m < 0){
@@ -41,5 +45,5 @@ int main(){
         Satt = s * -1;
     }
 
-    printf("O veiculo ficou no estacionamento por %.2i:%.2i:%.2i", Hatt, Matt, Satt);
+    printf("O veiculo numero %i ficou no estacionamento por %.2i:%.2i:%.2i", identificacao, Hatt, Matt, Satt);
 }
