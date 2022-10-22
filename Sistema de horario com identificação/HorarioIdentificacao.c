@@ -1,12 +1,8 @@
 #include <stdio.h>
-#include <locale.h>
 
 int main(){
 
     int horas=0, minutos=0, segundos=0, horasatt=0, minutosatt=0, segundosatt=0, h, m, s, Hatt, Matt, Satt, identificacao;
-    
-
-    setlocale(LC_ALL, "Portuguese");
 
     printf("Insira a numeracao do veiculo: ");
     scanf("%i", &identificacao);

@@ -1,9 +1,7 @@
 #include <stdio.h>
-#include <locale.h>
 
 int main(){
 
-    setlocale(LC_ALL, "Portuguese");
     int horas=0, minutos=0, segundos=0, horasatt, minutosatt, segundosatt, h, m, s, Hatt, Matt, Satt;
 
     printf("Insira o horario de entrada do veiculo.\nHoras: ");
