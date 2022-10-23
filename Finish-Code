@@ -3,6 +3,18 @@
 
 int main(){
 
+    int a =0;
+
+    do{
+
+        if(a == 1){
+
+        }
+        if(a == 2){
+            
+        }
+
+    }while(a!=3);
 
 return 0;
 }
