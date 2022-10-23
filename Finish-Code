@@ -3,9 +3,7 @@
 
 int main(){
 
-   float dia, tipo-veiculo;
-    char M,CP,CG;
-    int placa, opcao;
+    int opcao;
 
 do{
     printf("//MENU//\n\n");
