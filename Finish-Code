@@ -3,19 +3,30 @@
 
 int main(){
 
-    int a =0;
+   float dia, tipo-veiculo;
+    char M,CP,CG;
+    int placa, opcao;
 
-    do{
+do{
+    printf("//MENU//\n\n");
+    printf("Selecione a opcao desejada:\n");
+    printf("1 - Registrar Movimento\n");
+    printf("2 - Exibir Relatorio\n");
+    printf("3 - Encerrar\n");
 
-        if(a == 1){
+    scanf("%i", &opcao);
 
-        }
-        if(a == 2){
-            
-        }
+    if(opcao==1){
 
-    }while(a!=3);
 
+    }
+    if(opcao==2){
+
+
+    }
+}
+    while(opcao!=3);
+    
 return 0;
 }
 
