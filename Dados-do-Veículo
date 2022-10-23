@@ -1,0 +1,46 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+
+float tipo-veiculo;
+int dia, placa, horario-entrada, horario-saida, valor-pago;
+char M, CP, CG;
+
+    printf("Digite o Dia do Mes:\n");
+    scanf("%i" &dia);
+
+   printf("Digite o Tipo de Veiculo com M para Moto, CP para Carro Pequeno e CG para Carro Grande.\n");
+   scanf("%c", &tipo-veiculo);
+
+   if(tipo-veiculo==M){
+
+
+   }
+   else if(tipo-veiculo==CP){
+
+
+   }
+   else if(tipo-veiculo==CG){
+
+
+   }
+   else{
+    tipo-veiculo!=
+    printf("Veiculo Invalido.\n");
+   }
+
+   printf("Digite a Placa do Veiculo.\n");
+   scanf("%i", &placa);
+
+   printf("Digite o Horario de Entrada:(HORA(S);MINUTO(S);SEGUNDO(S))\n");
+   scanf("%f", &horario-entrada);
+
+   printf("Digite o Horario de Saida:(HORA(S);MINUTO(S);SEGUNDO(S))\n");
+   scanf("%f", &horario-saida);
+
+   printf("Digite o Valor Pago pelo Cliente:\n");
+   scanf("%i", &valor-pago);
+
+return 0;
+}

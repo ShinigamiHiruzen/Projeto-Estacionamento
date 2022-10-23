@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+
+    int opcao;
+
+do{
+    printf("//MENU//\n\n");
+    printf("Selecione a opcao desejada:\n");
+    printf("1 - Registrar Movimento\n");
+    printf("2 - Exibir Relatorio\n");
+    printf("3 - Encerrar\n");
+
+    scanf("%i", &opcao);
+
+    if(opcao==1){
+
+
+    }
+    if(opcao==2){
+
+
+    }
+}
+    while(opcao!=3);
+    
+return 0;
+}
+
+
+
+//Componentes da Equipe:
+- Eduardo de Andrade Bomfim Jr
+- Mari Alessandra Santana de Sousa
+- Felipe Soares Lisboa de Melo
+- Eider Souza Costa dos Santos
+- Bianca Hellen Oliveira Silva
+- Everton Jesus dos Santos
