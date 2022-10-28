@@ -1,43 +1,35 @@
-#include <stdio.h>
+#include<stdio.h>
+#include <stdlib.h>
 
 int main(){
+	
+	int hrE, minE, segE, hrS, minS, segS, hrF, minF, segF;
+	
+    do{
+    printf("Digite o Horario de Entrada:(HORAS:MINUTOS:SEGUNDOS)\n");
+	scanf("%i:%i:%i", &hrE, &minE, &segE);
+	}while(hrE<0 || hrE>23 || minE<0 || minE>59 || segE<0 || segE>59);
 
-    int horas=0, minutos=0, segundos=0, horasatt, minutosatt, segundosatt, h, m, s, Hatt, Matt, Satt;
+    do{
+	printf("Digite o Horario de Saida:(HORAS:MINUTOS:SEGUNDOS)\n");
+	scanf("%i:%i:%i", &hrS, &minS, &segS);
+	}while(hrS<0 || hrS>23 || minS<0 || minS>59 || segS<0 || segS>59);
 
-    printf("Insira o horario de entrada do veiculo.\nHoras: ");
-    scanf("%i", &horas);
-    printf("Minutos: ");
-    scanf("%i", &minutos);
-    printf("Segundos: ");
-    scanf("%i", &segundos);
+	hrF = hrS - hrE;
+    minF = minS - minE;
+    segF = segS - segE;
 
-    if (horas > horasatt && minutos > minutosatt && segundos > segundosatt){
-
-        horasatt = horas;
-        minutosatt = minutos;
-        segundosatt = segundos;
+    if(segF < 0){
+        minF = minF - 1;
+        segF = segF + 60;
     }
-     printf("Insira o horario de sai­da do veiculo.\nHoras: ");
-    scanf("%i", &horas);
-    printf("Minutos: ");
-    scanf("%i", &minutos);
-    printf("Segundos: ");
-    scanf("%i", &segundos);
-    
-    h = horasatt - horas;
-    m = minutosatt - minutos;
-    s = segundosatt - segundos;
-
-    if(h < 0){
-
-        Hatt = h * -1;
-    } if(m < 0){
-
-        Matt = m * -1;
-    }if(s < 0){
-
-        Satt = s * -1;
+    if(minF < 0){
+        hrF = hrF - 1;
+        minF = minF + 60;
     }
-
-    printf("O veiculo ficou no estacionamento por %.2i:%.2i:%.2i", Hatt, Matt, Satt);
+	
+	printf("O veiculo ficou no estacionamento por: %i:%i:%i", hrF, minF, segF);
+	
+	
+	return 0;
 }
