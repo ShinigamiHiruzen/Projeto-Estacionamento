@@ -15,7 +15,7 @@ int main(){
 
    float dia, tipo_veiculo;
     char M,CP,CG;
-    int placa, opcao, veiculos, horas=0, minutos=0, segundos=0, horasatt=0, minutosatt=0, segundosatt=0, h, m, s, Hatt, Matt, Satt, calculo1;
+    int placa, opcao, veiculos, horas=0, minutos=0, segundos=0, horasatt=0, minutosatt=0, segundosatt=0, h=0, m=0, s=0, Hatt=0, Matt=0, Satt=0, calculo1;
 
 do{
     printf("------------Seja Bem Vindo ao Sistema de Estacionamento------------\n\n");
@@ -33,45 +33,33 @@ do{
 
         printf("Selecione o tipo de veiculo para ser registrado.\n1 - Moto\n2 - Carro pequeno\n3 - Carro grande\n");
         scanf("%i", &veiculos);
-        printf("Coloque o horario de entrada do veiculo.\nHoras: ");
-        scanf("%i", &horas);
-        printf("Minutos: ");
-        scanf("%i", &minutos);
-        printf("Segundos: ");
-        scanf("%i", &segundos);
-
-        if(horas > horasatt && minutos > minutosatt && segundos > segundosatt){
-
-            horasatt = horas;
-            minutosatt = minutos;
-            segundosatt = segundos;
-        }
-
-        printf("Coloque o horario de saide do veiculo.\nHoras: ");
-        scanf("%i", &horas);
-        printf("Minutos: ");
-        scanf("%i", &minutos);
-        printf("Segundos: ");
-        scanf("%i", &segundos);
-
+        printf("Coloque o horario de entrada do veiculo: (Horas:Minutos:Segundos)\n");
+        scanf("%i:%i:%i", &horas, &minutos, &segundos);
+          
+        printf("Coloque o horario de saida do veiculo: (Horas:Minutos:Segundos)\n");
+        scanf("%i:%i:%i", &horasatt, &minutosatt, &segundosatt);
+       
         Hatt = horasatt - horas;
         Matt = minutosatt - minutos;
         Satt = segundosatt - segundos;
 
-        if(veiculos == 1){
+        if(Hatt < 0){
 
-            if (Hatt >= 1){
+            h = Hatt * -1;
+            printf("O tempo que o veiculo ficou no estacionamento foi: %.2d:%.2d:%.2d\n", h, Matt, Satt);
+        } 
+        if(Matt < 0){
 
-                calculo1 = Hatt * 4;
-            }
+            m = Matt * -1;
+            printf("O tempo que o veiculo ficou no estacionamento foi: %.2d:%.2d:%.2d\n", Hatt, m, Satt);
         }
-        if(veiculos == 2){
+        if(Satt < 0){
 
-                
+            s = Satt * -1;
+            printf("O tempo que o veiculo ficou no estacionamento foi: %.2d:%.2d:%.2d\n", Hatt, Matt, s);
         }
-
-        if(veiculos == 3){
-
+        else if(Hatt > 0 && Matt > 0 && Satt > 0){
+        printf("O tempo que o veiculo ficou no estacionamento foi: %.2d:%.2d:%.2d\n", h, m, s);
         }
     }
     if(opcao==2){
