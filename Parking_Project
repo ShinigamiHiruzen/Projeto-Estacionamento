@@ -1,29 +1,16 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-/*Componentes da Equipe:
-copyright © 2022 todos os direitos reservados,
-- Eduardo de Andrade Bomfim Jr
-- Mari Alessandra Santana de Sousa
-- Felipe Soares Lisboa de Melo
-- Eider Souza Costa dos Santos
-- Bianca Hellen Oliveira Silva
-- Everton Jesus dos Santos
-*/
-
-//Comentários do dia 16/11/2022, sao 01:48, controlar a identificação dos carros
-
 //Função main
 int main(){
 	
 	//Variaveis
     float valor_cobrado, valor_pago, valor_correto, valor_a_devolver, valor_a_pagar, valor_percentual=0;
     float valor_total_cobrado_M=0, valor_total_cobrado_CP=0, valor_total_cobrado_CG=0;
-    float valor_restante_M, valor_restante_CP, valor_restante_CG;
     float valor_mes_M=0, valor_mes_CP=0, valor_mes_CG=0;
     float moto, carro_pequeno, carro_grande;
     int opcao, opcao2;
-    float valor_total=0, diferenca_valores=0, Valores_Mes=0;
+    float valor_total=0, diferenca_valores=0;
     int codigo_veiculo, dia=0, MV_codigo_veiculo;
     int hrE, minE, segE, hrS, minS, segS, hrF, minF, segF;
     //c= quantidade de cobranças menor feitas total
@@ -51,7 +38,7 @@ do{
     switch (opcao){
       case 1:
     // Contagem do Mes
-    for(dia=1; dia<=2; dia++){
+    for(dia=1; dia<=30; dia++){
             
             // Essa parte vai igualar todas as variaveis acumulativas
             Cliente=0;
@@ -410,12 +397,11 @@ do{
       case 2:
         // Calculo das formulas do percentual dos valores
         diferenca_valores = valor_pago_mes - valor_cobrado_mes;
-        valor_da_diferenca = diferenca_valores/2;
+        valor_da_diferenca = diferenca_valores/30;
         // Vai testar se houve carro pequenos nos meses
          if(carropequeno_total_menor_cobrado > 0){
         valor_percentual = (carropequeno_total_menor_cobrado/carropequeno_total)*100;
         }
-
         printf(">>>>> RELATORIO DO MES <<<<<\n\n");
         printf("Valor Arrecadado por Veiculo:\n");
         printf("Motos: R$ %.2f\n", valor_mes_M);
